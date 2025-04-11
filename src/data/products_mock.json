@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Rel\u00f3gio Elegante",
+      "price": 50.99,
+      "image": "../src/assets/watch.jpg"
+    },
+    {
+      "id": 2,
+      "name": "C\u00e2mera Vintage",
+      "price": 85.5,
+      "image": "../src/assets/camera.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Fones de Ouvido",
+      "price": 35.99,
+      "image": "../src/assets/headphone.jpg"
+    },
+    {
+      "id": 4,
+      "name": "T\u00eanis de Corrida",
+      "price": 120.0,
+      "image": "../src/assets/sneakers.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Smartphone",
+      "price": 299.99,
+      "image": "../src/assets/smartphone.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Livro de Aventura",
+      "price": 19.99,
+      "image": "../src/assets/book.jpg"
+    }
+  ]
