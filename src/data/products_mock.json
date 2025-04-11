@@ -8,7 +8,7 @@
     {
       "id": 2,
       "name": "C\u00e2mera Vintage",
-      "price": 85.5,
+      "price": 85.59,
       "image": "../src/assets/camera.jpg"
     },
     {
@@ -20,7 +20,7 @@
     {
       "id": 4,
       "name": "T\u00eanis de Corrida",
-      "price": 120.0,
+      "price": 120.00,
       "image": "../src/assets/sneakers.jpg"
     },
     {

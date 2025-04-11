@@ -10,7 +10,7 @@ const Product = ({product, onAddToCart}) => {
         <h3>{product.name}</h3>
         <p>${product.price}</p>
         <div className="cart-buttons">
-            <select onChange={(e) => setQuantity(e.target.value)}>
+            <select onChange={(e) => setQuantity(parseInt(e.target.value))}>
                 {[...Array(10).keys()].map((x) => (
                     <option key={x + 1} value={x + 1}>{x + 1}</option>
                 ))}

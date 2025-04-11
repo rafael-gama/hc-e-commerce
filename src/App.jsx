@@ -33,6 +33,19 @@ function App() {
     })
   }
 
+  const handleUpdateCart = (product, quantity) => {
+    toast.info(`Quantidade do item ${product.name} atualizada.`);
+    setCartItems((prevItems) => {
+      return prevItems.map((item) => item.id === product.id ? {...item, quantity: +quantity} : item)
+    })
+  }
+
+  const handleRemoveFromCart = (product) => {
+    toast.error(`${product.name} foi removido com sucesso.`)
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== product.id))
+  }
+
+
   return <BrowserRouter>
     <nav>
       <Link to={'/'}>Catálogo</Link>
@@ -41,7 +54,21 @@ function App() {
     <div className="container">
       <Routes>
         <Route path='/' element={<Catalog onAddToCart={handleAddCart}/>}/>
-        <Route path='/cart' element={<Cart cartItems={cartItems}/>}/>
+        <Route 
+          path='/cart' 
+          element={
+            <Cart 
+              cartItems={cartItems} 
+              onUpdateCart={handleUpdateCart} 
+              onRemoveFromCart={handleRemoveFromCart}/>} 
+              onCheckout={() => { 
+                if (cartItems.length > 0 ){ 
+                  toast.success('Compra finalizada com sucesso!')
+                  setCartItems([]);
+                }else{
+                  toast.error('Seu carrinho está vazio.')
+                }
+              }}/>
         <Route path='/' element={<ThankYouPage />}/>
       </Routes>
     </div>
